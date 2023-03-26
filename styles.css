@@ -84,6 +84,9 @@ header {
   border-bottom: 3px solid black;
   padding: 4px 8px;
 }
+.radio:hover {
+  background: rgb(221, 221, 4);
+}
 
 label {
   font-size: 14px;
@@ -93,7 +96,7 @@ label {
 }
 
 .highlight {
-  background-color: #fff0ee;
+  background-color: #fff4c5;
   color: #bd301d;
   font-weight: bold;
   accent-color: #bd301d;
@@ -132,6 +135,11 @@ input[type="radio"] {
   border-radius: 10px;
   padding: 20px;
   top: 80px;
+  transform: rotate(10deg);
+}
+.get-image-btn:hover {
+  background-color: #6dde9e;
+  padding: 22px;
 }
 
 /* modal */

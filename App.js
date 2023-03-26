@@ -51,16 +51,13 @@ function getSingleCatObject() {
 }
 
 function getMatchingCatsArray() {
-  if (document.querySelector('input[type="radio"]:checked')) {
-    const selectedEmotion = document.querySelector(
-      'input[type="radio"]:checked'
-    ).value;
+  const selectedEmotion = document.querySelector('input[type="radio"]:checked');
+  if (selectedEmotion) {
     const isGif = gifsOnlyOption.checked;
-
     const matchingCatsArray = catsData.filter(function (cat) {
       return isGif
-        ? cat.emotionTags.includes(selectedEmotion) && cat.isGif
-        : cat.emotionTags.includes(selectedEmotion);
+        ? cat.emotionTags.includes(selectedEmotion.value) && cat.isGif
+        : cat.emotionTags.includes(selectedEmotion.value);
     });
     return matchingCatsArray;
   }
