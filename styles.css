@@ -2,6 +2,13 @@ html,
 body {
   margin: 0;
   font-family: "Karla", sans-serif;
+  background-color: #9c7afd;
+  background-image: url("/images/bg.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
 }
 
 /*typography*/
@@ -14,16 +21,18 @@ h3 {
 
 h1,
 h2 {
-  color: #eed6d3;
+  color: white;
   margin: 0;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 32px;
+  text-shadow: 3px 3px 0px black;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 17px;
+  text-shadow: 2px 2px 0px black;
 }
 
 h3 {
@@ -33,7 +42,8 @@ h3 {
 /* layout */
 
 header {
-  background-color: #67595e;
+  background-color: coral;
+  border-bottom: 6px solid black;
 }
 
 .header-inner {
@@ -52,7 +62,7 @@ header {
 .controls-container {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 300px;
   margin: 0px auto;
 }
 
@@ -61,14 +71,17 @@ header {
 .emotion-radios {
   display: flex;
   flex-direction: column;
-  border: 1px solid #bcbcbc;
-  border-radius: 5px;
+
+  border: 3px solid black;
+  box-shadow: 4px 4px 0px black;
+  background: yellow;
+  border-radius: 10px;
 }
 
 .radio {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #bcbcbc;
+  border-bottom: 3px solid black;
   padding: 4px 8px;
 }
 
@@ -107,13 +120,18 @@ input[type="radio"] {
 }
 
 .get-image-btn {
-  background-color: #67595e;
-  color: #eed6d3;
-  padding: 15px 19px;
-  font-size: 24px;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 8px;
+  background-color: #7bf5b0;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px black;
+  border: 3px solid black;
+  box-shadow: 4px 4px 0px black;
+  border-radius: 10px;
+  padding: 20px;
+  top: 80px;
 }
 
 /* modal */
@@ -127,11 +145,12 @@ input[type="radio"] {
   right: 0;
   align-items: center;
   justify-content: center;
-  border: 1px solid #67595e;
+  border: 3px solid black;
   border-radius: 5px;
   width: 420px;
   height: 490px;
-  background-color: #fff0ee;
+  background-color: #f4cffb;
+  box-shadow: 4px 4px 0px black;
 }
 
 .cat-img {
@@ -144,9 +163,9 @@ input[type="radio"] {
   position: absolute;
   top: 2%;
   right: 2%;
-  background-color: transparent;
-  border: 2px solid #555;
-  color: #555;
+  background-color: white;
+  border: 3px solid black;
+  color: black;
   border-radius: 50%;
   padding: 2px 6px;
   font-size: 14px;
@@ -156,4 +175,11 @@ input[type="radio"] {
   color: white;
   background-color: #bd301d;
   border: 2px solid #bd301d;
+}
+@media (max-width: 375px) {
+  .meme-modal {
+    width: 360px;
+    height: 390px;
+    top: 20%;
+  }
 }
